@@ -277,7 +277,7 @@
                         </div>
                         <div class="mb-2">
                             <label for="address" class="block text-xs font-medium text-gray-700">Address</label>
-                            <textarea id="address" name="address"
+                            <textarea id="adress" name="adress"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-1.5 text-xs focus:ring focus:ring-blue-200"
                                 rows="2"></textarea>
                         </div>

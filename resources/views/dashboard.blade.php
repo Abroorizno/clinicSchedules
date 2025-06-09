@@ -151,8 +151,8 @@
                                     #{{ $no++ }}</span>
                                 <span
                                     class="px-2 py-1 rounded text-xs font-bold
-                                    {{ $item->status == 1 ? 'bg-green-100 text-green-700' : ($item->status == 0 ? 'bg-red-100 text-red-700' : 'bg-gray-200 text-gray-700') }}">
-                                    {{ $item->status == 1 ? 'Scheduled' : ($item->status == 2 ? 'Completed' : 'Cancelled') }}
+                                    {{ $item->status == 0 ? 'bg-gray-200 text-gray-700' : ($item->status == 1 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700') }}">
+                                    {{ $item->status == 0 ? 'Completed' : ($item->status == 1 ? 'Scheduled' : 'Cancelled') }}
                                 </span>
                             </div>
                             <div class="mb-1">
@@ -185,8 +185,6 @@
                                         @csrf
                                         @method('PUT')
                                         <input type="hidden" name="status" value="0">
-                                        {{-- <label for="notes-{{ $item->id }}" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Catatan</label>
-                                        <textarea name="notes" id="notes-{{ $item->id }}" rows="2" class="w-full rounded border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 focus:ring-green-500 focus:border-green-500 text-sm resize-none" placeholder="Tambahkan catatan..."></textarea> --}}
                                         <button type="submit"
                                             class="px-3 py-1 rounded bg-green-500 text-white text-sm font-semibold hover:bg-green-600">
                                             Confirmation
