@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -19,6 +20,17 @@ return new class extends Migration
             // Add foreign key constraint
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('restrict')->onUpdate('cascade');
         });
+
+        DB::table('users')->insert([
+            [
+                'role_id' => 1,
+                'name' => 'Admin',
+                'email' => 'admin@gmail.com',
+                'password' => bcrypt('admin123'),
+                'created_at' => now(),
+                'updated_at' => now()
+            ]
+        ]);
     }
 
     /**
