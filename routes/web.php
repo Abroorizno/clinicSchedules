@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PatientsSchedulesController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SchedulesController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/patients', [UsersController::class, 'patient'])->name('users.patients');
     Route::get('/doctors', [UsersController::class, 'doctor'])->name('users.doctors');
+
+    Route::get('/report', [ReportController::class, 'index'])->name('schedules.report');
 });
 
 Route::middleware(['auth', 'role:1'])->group(function () {

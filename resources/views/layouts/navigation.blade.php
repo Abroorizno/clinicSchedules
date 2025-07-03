@@ -67,6 +67,11 @@
                                 </x-dropdown-link>
                             </x-slot>
                         </x-dropdown>
+                        <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                            <x-nav-link :href="route('schedules.report')" :active="request()->routeIs('schedules.report')">
+                                {{ __('Report Schedules') }}
+                            </x-nav-link>
+                        </div>
                     </div>
                 @elseif (Auth::user()->role_id == 2)
                     {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">

@@ -53,6 +53,7 @@ class UsersController extends Controller
             'photo' => $request->file('photo') ? $request->file('photo')->store('profile-photos', 'public') : null,
         ]);
 
+
         // Jika role_id = 2 (dokter), insert juga ke tabel Doctors
         if ($request->role_id == 2) {
             $user = User::latest()->first();
