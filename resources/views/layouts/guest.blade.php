@@ -17,6 +17,8 @@
 </head>
 
 <body class="font-sans text-gray-900 antialiased bg-gradient-to-t from-white to-sky-300">
+    {{-- <body class="font-sans text-gray-900 antialiased"
+        style="background-image: url('{{ asset('storage/background/rumah-sakit.jpg') }}'); background-size: cover; background-position: center;"> --}}
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <div>
             <a href="/">
